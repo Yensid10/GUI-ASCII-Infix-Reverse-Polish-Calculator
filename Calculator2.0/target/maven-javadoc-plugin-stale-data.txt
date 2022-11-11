@@ -1,0 +1,54 @@
+@options
+@packages
+@argfile
+-encoding
+'Cp1252'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'The CS2800 Calculator 0.0.1-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/bensh/eclipse-workspace/Calculator2.0/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'The CS2800 Calculator 0.0.1-SNAPSHOT API'
+uk.ac.rhul.cs2800
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java/uk/ac/rhul/cs2800/BadTypeException.java'
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java/uk/ac/rhul/cs2800/Entry.java'
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java/uk/ac/rhul/cs2800/Stack.java'
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java/uk/ac/rhul/cs2800/Symbol.java'
+'C:/Users/bensh/eclipse-workspace/Calculator2.0/src/main/java/uk/ac/rhul/cs2800/Type.java'
+C:\Users\bensh\eclipse-workspace\Calculator2.0\src\main\java = 1665520237274
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\allclasses-index.html = 1666007515649
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\allclasses.html = 1666007515660
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\allpackages-index.html = 1666007515652
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\constant-values.html = 1666007515545
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\deprecated-list.html = 1666007515657
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\element-list = 1666007515519
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\help-doc.html = 1666007515666
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\index-all.html = 1666007515637
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\index.html = 1666007515662
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\member-search-index.js = 1666007515634
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\member-search-index.zip = 1666007515635
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\overview-tree.html = 1666007515602
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\package-search-index.js = 1666007515617
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\package-search-index.zip = 1666007515630
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\script.js = 1666007515671
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\search.js = 1666007515673
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\serialized-form.html = 1666007515556
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\stylesheet.css = 1666007515669
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\type-search-index.js = 1666007515632
+C:\Users\bensh\eclipse-workspace\Calculator2.0\target\site\apidocs\type-search-index.zip = 1666007515633
