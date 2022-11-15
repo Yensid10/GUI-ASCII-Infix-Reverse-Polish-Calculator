@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"uk.ac.rhul.cs2800","l":"BadTypeException"},{"p":"uk.ac.rhul.cs2800","l":"Entry"},{"p":"uk.ac.rhul.cs2800","l":"Stack"},{"p":"uk.ac.rhul.cs2800","l":"Symbol"},{"p":"uk.ac.rhul.cs2800","l":"Type"}]
