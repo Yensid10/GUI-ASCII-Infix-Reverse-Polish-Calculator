@@ -15,8 +15,9 @@ public class Controller extends Application {
   @Override
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("/calcGui.fxml"));
-    Scene scene = new Scene(root, 300, 350);
+    Scene scene = new Scene(root, 300, 310);
     primaryStage.setResizable(false);
+    primaryStage.setTitle("Calculator");
     primaryStage.setScene(scene);
     primaryStage.show();
   }

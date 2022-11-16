@@ -10,45 +10,52 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rhul.cs2800.CalcGui">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="300.0" stylesheets="@calcGui.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rhul.cs2800.CalcGui">
    <children>
-      <Pane layoutX="15.0" layoutY="14.0" prefHeight="124.0" prefWidth="270.0">
+      <Pane layoutX="4.0" layoutY="31.0" prefHeight="272.0" prefWidth="292.0" styleClass="calcBackground">
          <children>
-            <Label layoutX="8.0" layoutY="6.0" text="Calculator" />
-            <Label layoutX="61.0" layoutY="95.0" text="Enter Expression:">
+            <Label layoutX="65.0" layoutY="30.0" styleClass="enter" text="Enter Expression:">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
+            <Pane layoutX="10.0" layoutY="146.0" prefHeight="109.0" prefWidth="270.0">
+               <children>
+                  <TextField fx:id="result" editable="false" layoutY="55.0" prefHeight="57.0" prefWidth="270.0" styleClass="result">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="calculate" layoutX="94.0" mnemonicParsing="false" onAction="#isPressed" prefHeight="47.0" prefWidth="82.0" text="Calculate">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="48.0" layoutY="121.0" prefHeight="30.0" prefWidth="222.0">
+               <children>
+                  <RadioButton fx:id="infixButton" layoutX="14.0" layoutY="-1.0" mnemonicParsing="false" styleClass="infix" text="Infix">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="notation" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="polishButton" layoutX="88.0" mnemonicParsing="false" selected="true" styleClass="rPolish" text="Reverse Polish" toggleGroup="$notation" />
+               </children>
+            </Pane>
+            <Pane layoutX="22.0" layoutY="84.0" prefHeight="30.0" prefWidth="248.0">
+               <children>
+                  <TextField fx:id="expression" layoutX="5.0" layoutY="1.0" prefHeight="26.0" prefWidth="239.0" styleClass="expression" />
+               </children>
+            </Pane>
          </children>
       </Pane>
-      <Pane layoutX="39.0" layoutY="190.0" prefHeight="30.0" prefWidth="222.0">
+      <Pane layoutX="15.0" layoutY="8.0" prefHeight="30.0" prefWidth="270.0">
          <children>
-            <RadioButton fx:id="infixButton" layoutX="14.0" layoutY="-1.0" mnemonicParsing="false" text="Infix">
-               <toggleGroup>
-                  <ToggleGroup fx:id="notation" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="polishButton" layoutX="88.0" mnemonicParsing="false" selected="true" text="Reverse Polish" toggleGroup="$notation" />
-         </children>
-      </Pane>
-      <Pane layoutX="26.0" layoutY="160.0" prefHeight="30.0" prefWidth="248.0">
-         <children>
-            <TextField fx:id="expression" layoutX="5.0" layoutY="1.0" prefHeight="26.0" prefWidth="239.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="15.0" layoutY="223.0" prefHeight="102.0" prefWidth="270.0">
-         <children>
-            <TextField fx:id="result" editable="false" layoutY="55.0" prefHeight="47.0" prefWidth="270.0">
+            <Label layoutX="91.0" layoutY="-7.0" text="Calculator" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </TextField>
-            <Button fx:id="calculate" layoutX="94.0" mnemonicParsing="false" onAction="#isPressed" prefHeight="47.0" prefWidth="82.0" text="Calculate">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
+                  <Font size="20.0" />
+               </font></Label>
          </children>
       </Pane>
    </children>

@@ -1,0 +1,30 @@
+.root {
+    -fx-background-color: rgb(21, 3, 35);
+    -fx-background-radius: 35
+    ;
+}
+.calcBackground{
+    -fx-background-color: linear-gradient(to bottom left, rgb(49, 41, 200), rgb(23, 185, 200));
+    -fx-background-radius: 35;
+}
+.result{
+    -fx-background-color: #00000025;
+    -fx-background-radius: 10;
+    -fx-text-fill: rgb(254, 224, 255);
+    /* -fx-text-stroke-color: #000000; */
+    -fx-text-stroke: 3px;
+}
+.expression{
+    -fx-background-color: #00000080;
+    -fx-background-radius: 10;
+    -fx-text-fill: rgb(211, 211, 211);
+}
+.infix{
+    -fx-text-fill: rgb(0, 0, 0);
+}
+.rPolish{
+    -fx-text-fill: rgb(0, 0, 0);
+}
+.enter{
+    -fx-text-fill: rgb(0, 0, 0);
+}

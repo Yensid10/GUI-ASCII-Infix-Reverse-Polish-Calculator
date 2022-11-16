@@ -29,7 +29,13 @@ public class CalcGui {
 
   @FXML
   void isPressed(ActionEvent event) {
-    result.setText("Test");
+    String expressionText = expression.getText();
+    if (infixButton.isSelected() == true) {
+      result.setText("Infix: " + expressionText);
+    } else {
+      result.setText("Reverse Polish: " + expressionText);
+    }
+
   }
 
 }
