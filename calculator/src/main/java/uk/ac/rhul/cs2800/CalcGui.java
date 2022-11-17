@@ -7,6 +7,10 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
+/**
+ * @author bensh
+ *
+ */
 public class CalcGui {
 
   @FXML
