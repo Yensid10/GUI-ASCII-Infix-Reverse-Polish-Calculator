@@ -13,14 +13,6 @@ import javafx.stage.Stage;
  */
 public class GuiDriver extends Application {
   
-//  public GuiDriver() {
-//    
-//  }
-
-  public static void initiateGui(String[] args) {
-    GuiDriver.main(args);
-  }
-
   public static void main(String[] args) {
     launch(args);
   }

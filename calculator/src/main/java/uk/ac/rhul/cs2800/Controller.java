@@ -2,19 +2,29 @@ package uk.ac.rhul.cs2800;
 
 import java.util.Scanner;
 
+/**
+ * @author bensh
+ *
+ */
 public class Controller {
 
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
     if (System.console() == null) {
-      GuiDriver.initiateGui(args);
-    } else {
+      GuiDriver.main(args);
+    } else { //Can't figure out how to get this to work properly yet...
       terminalMenu();
     }
   }
 
+  /**
+   * 
+   */
   public static void terminalMenu() {
-    String notation = null;
-    String expression;
+    
+    
     Scanner scanner = new Scanner(System.in);
     System.out.println("--------------------------");
     System.out.println("--------CALCULATOR--------");
@@ -23,10 +33,10 @@ public class Controller {
     System.out.println("---Infix|Reverse Polish---");
     System.out.println("--------TYPE(I/R)---------");
     System.out.println("--------------------------");
-    while ((notation.equals("I")) || (notation.equals("R"))) {
+    String notation = "";
+    while ((notation.equals("I") != true) && (notation.equals("R") != true)) {
       System.out.print("------------------------[");
       notation = scanner.next().toUpperCase();
-//      System.out.print("]------------");
       if ((notation.equals("I")) || (notation.equals("R"))) {
         continue;
       } else {
@@ -36,11 +46,11 @@ public class Controller {
     System.out.println("-------PLEASE ENTER-------");
     System.out.println("--------EXPRESSION--------");
     System.out.print("--------[");
-    expression = scanner.next();
+    String expression = scanner.next();
     if (notation.equals("I")) {
-      //call infix
+      // call infix
     } else {
-      //call reverse polish
+      // call reverse polish
     }
   }
 
