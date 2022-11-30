@@ -11,13 +11,15 @@ import javafx.scene.control.ToggleGroup;
  * @author bensh
  *
  */
-public class CalcGui {
+public class CalcGui implements ViewInterface {
+  String expression;
+  String answer;  
 
   @FXML
   private Button calculate;
 
   @FXML
-  private TextField expression;
+  private TextField expressionField;
 
   @FXML
   private RadioButton infixButton;
@@ -33,13 +35,25 @@ public class CalcGui {
 
   @FXML
   void isPressed(ActionEvent event) {
-    String expressionText = expression.getText();
+    expression = expressionField.getText();
     if (infixButton.isSelected() == true) {
-      result.setText("Infix: " + expressionText);
+      result.setText("Infix: " + expression);
     } else {
-      result.setText("Reverse Polish: " + expressionText);
+      result.setText("Reverse Polish: " + expression);
     }
 
+  }
+
+  @Override
+  public String expression() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public void answer() {
+    // TODO Auto-generated method stub
+    
   }
 
 }
