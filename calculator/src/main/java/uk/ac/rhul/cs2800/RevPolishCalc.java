@@ -1,5 +1,6 @@
 package uk.ac.rhul.cs2800;
 
+import java.text.DecimalFormat;
 import java.util.regex.Pattern;
 
 /**
@@ -10,7 +11,7 @@ public class RevPolishCalc implements CalcInterface {
   NumStack values;
 
   private Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
-  
+
   public RevPolishCalc() {
     values = new NumStack();
   }
@@ -20,6 +21,7 @@ public class RevPolishCalc implements CalcInterface {
     String[] splitExpression = expression.split(" ");
     for (int i = 0; i < splitExpression.length; i++) {
       if (pattern.matcher(splitExpression[i]).matches()) {
+        // Could replace with a try and catch using badtypeexception etc.
         values.push(Float.parseFloat(splitExpression[i]));
       } else {
         switch (splitExpression[i]) {
@@ -36,7 +38,7 @@ public class RevPolishCalc implements CalcInterface {
             values.push(1 / values.pop() * values.pop());
             break;
           default:
-            //exception
+            throw new InvalidExpressionException("INVALID EXPRESSION");
         }
       }
     }

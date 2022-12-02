@@ -44,5 +44,20 @@ class TestRevPolishCalc {
         "With the expression given being in Reverse Polish Notation, the resulting arithmatic "
         + "returned answer using division should be 0.75");
   }
+  
+  @Test // Test #6
+  void complexTest() throws InvalidExpressionException, BadTypeException {
+    assertEquals(calculator.evaluate("3 9 4 5 / * 12 + +"), 22.2f,
+        "With the expression given being in Reverse Polish Notation, the resulting arithmatic "
+        + "returned answer should be 22.2");
+  }
+  
+  @Test // Test #7
+  void exceptionTest() throws InvalidExpressionException {
+    assertThrows(InvalidExpressionException.class, () -> calculator.evaluate("ab c d"),
+        "When entering letters into the calculator expression, it should return an Invalid-"
+        + "-ExpressionException");
+  }
+  
 
 }
