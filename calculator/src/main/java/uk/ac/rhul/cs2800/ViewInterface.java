@@ -5,7 +5,11 @@ package uk.ac.rhul.cs2800;
  *
  */
 public interface ViewInterface {
-  public String expression();
-  
-  public void answer();
+  public String getExpression();
+
+  public void setAnswer(float result);
+
+  public boolean getFix();
+
+  // public void addObserver(Observer observer);
 }

@@ -44,14 +44,26 @@ public class CalcAscii implements ViewInterface {
   }
 
   @Override
-  public String expression() {
+  public String getExpression() {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public void answer() {
+  public void setAnswer(float result) {
     // TODO Auto-generated method stub
     
   }
+
+  @Override
+  public boolean getFix() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  // @Override
+  // public void addObserver(Observer observer) {
+  // // TODO Auto-generated method stub
+  //
+  // }
 }
