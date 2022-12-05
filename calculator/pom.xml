@@ -67,7 +67,7 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.4</version>
         <configuration>
-          <mainClass>uk.ac.rhul.cs2800.CalcView</mainClass>
+          <mainClass>uk.ac.rhul.cs2800.Calculator</mainClass>
         </configuration>
         <executions>
           <execution>
@@ -90,7 +90,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>uk.ac.rhul.cs2800.CalcView</mainClass>
+              <mainClass>uk.ac.rhul.cs2800.Calculator</mainClass>
             </manifest>
           </archive>
         </configuration>

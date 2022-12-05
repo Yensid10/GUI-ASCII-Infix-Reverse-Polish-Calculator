@@ -1,7 +1,7 @@
 package uk.ac.rhul.cs2800;
 
+import java.util.EmptyStackException;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -12,9 +12,7 @@ import javafx.scene.control.ToggleGroup;
  * @author bensh
  *
  */
-public class CalcGui implements ViewInterface {
-  // String expression;
-  // String answer;
+public class CalcJavaFx implements ViewInterface {
   CalcModel calculator;
 
   @FXML
@@ -38,7 +36,14 @@ public class CalcGui implements ViewInterface {
   @FXML
   void isPressed(ActionEvent event) throws InvalidExpressionException, BadTypeException {
     calculator = new CalcModel();
-    float answer = calculator.evaluate(getExpression(), getFix());
+    String answer;
+    try {
+      answer = Float.toString(calculator.evaluate(getExpression(), getFix()));
+      result.setStyle("-fx-background-color: #00000025;");
+    } catch (InvalidExpressionException | EmptyStackException e) {
+      answer = "INVALID EXPRESSION";
+      result.setStyle("-fx-background-color: #ff000065;");
+    }
     setAnswer(answer);
   }
 
@@ -48,9 +53,8 @@ public class CalcGui implements ViewInterface {
   }
 
   @Override
-  public void setAnswer(float result) {
-    this.result.setText(Float.toString(result));
-
+  public void setAnswer(String result) {
+    this.result.setText(result);
   }
 
   @Override
@@ -60,16 +64,4 @@ public class CalcGui implements ViewInterface {
     }
     return true;
   }
-
-  // @Override
-  // public void addObserver(Observer observer) {
-  // calculate.setOnAction(new EventHandler<ActionEvent>() {
-  //
-  // public void handle(ActionEvent event) {
-  // observer.notification();
-  // }
-  // });
-  // }
-
-
 }

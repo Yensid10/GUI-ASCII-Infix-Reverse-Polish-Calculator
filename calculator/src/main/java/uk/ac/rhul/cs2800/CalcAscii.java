@@ -50,7 +50,7 @@ public class CalcAscii implements ViewInterface {
   }
 
   @Override
-  public void setAnswer(float result) {
+  public void setAnswer(String result) {
     // TODO Auto-generated method stub
     
   }
@@ -60,10 +60,4 @@ public class CalcAscii implements ViewInterface {
     // TODO Auto-generated method stub
     return false;
   }
-
-  // @Override
-  // public void addObserver(Observer observer) {
-  // // TODO Auto-generated method stub
-  //
-  // }
 }

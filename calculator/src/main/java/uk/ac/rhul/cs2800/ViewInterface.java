@@ -7,9 +7,7 @@ package uk.ac.rhul.cs2800;
 public interface ViewInterface {
   public String getExpression();
 
-  public void setAnswer(float result);
+  public void setAnswer(String result);
 
   public boolean getFix();
-
-  // public void addObserver(Observer observer);
 }

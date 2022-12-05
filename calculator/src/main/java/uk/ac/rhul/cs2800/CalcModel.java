@@ -10,7 +10,7 @@ public class CalcModel {
   public CalcModel() {
     revPolishCalc = new RevPolishCalc();
   }
-  
+
   /**
    * @param expression
    * @param isPostfix
@@ -18,13 +18,12 @@ public class CalcModel {
    * @throws InvalidExpressionException
    * @throws BadTypeException
    */
-  public float evaluate(String expression, Boolean isPostfix) 
+  public float evaluate(String expression, Boolean isPostfix)
       throws InvalidExpressionException, BadTypeException {
     if (isPostfix == true) {
       return revPolishCalc.evaluate(expression);
     } else {
       return 0;
     }
-    
   }
 }

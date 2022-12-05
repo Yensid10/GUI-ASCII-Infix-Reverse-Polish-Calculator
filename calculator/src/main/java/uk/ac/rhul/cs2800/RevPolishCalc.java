@@ -38,5 +38,4 @@ public class RevPolishCalc implements CalcInterface {
     }
     return values.pop();
   }
-
 }
