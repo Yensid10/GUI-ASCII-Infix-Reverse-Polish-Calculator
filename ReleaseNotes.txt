@@ -1,0 +1,10 @@
+Release v1.1
+
+Features:
+- Graphical Calculator
+- Handles Postfix
+- Handles Infix
+- Validates Expressions
+
+Excludes:
+-Ascii Calculator
