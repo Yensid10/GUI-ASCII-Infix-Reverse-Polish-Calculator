@@ -44,10 +44,9 @@ public class CalcJavaFx implements ViewInterface {
       result.setStyle("-fx-background-color: #ff000070;");
     }
     if (answer == "Infinity") {
-      answer = "INVALID EXPRESSION";
+      answer = "MATHS ERROR";
       result.setStyle("-fx-background-color: #ff000070;");
     }
-    //Add better custom error messages
     setAnswer(answer);
   }
 

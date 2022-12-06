@@ -14,9 +14,11 @@ public class RevPolishCalc implements CalcInterface {
   @Override
   public float evaluate(String expression) throws InvalidExpressionException, BadTypeException {
     String[] splitExpression = expression.split(" ");
+    int validationCount = 0; 
     for (int i = 0; i < splitExpression.length; i++) {
       try {
         values.push(Float.parseFloat(splitExpression[i]));
+        validationCount++;
       } catch (Exception e) {
         switch (splitExpression[i]) {
           case "+":
@@ -34,7 +36,11 @@ public class RevPolishCalc implements CalcInterface {
           default:
             throw new InvalidExpressionException("INVALID EXPRESSION");
         }
+        validationCount += -1;
       }
+    }
+    if (validationCount != 1) {
+      throw new InvalidExpressionException("INVALID EXPRESSION");
     }
     return values.pop();
   }

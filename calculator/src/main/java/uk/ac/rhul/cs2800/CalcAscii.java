@@ -28,7 +28,7 @@ public class CalcAscii implements ViewInterface {
         answer = "INVALID EXPRESSION";
       }
       if (answer == "Infinity") {
-        answer = "INVALID EXPRESSION";
+        answer = "MATHS ERROR";
       }
       System.out.println("--------------------------");
       setAnswer(answer);
@@ -54,7 +54,6 @@ public class CalcAscii implements ViewInterface {
     System.out.println("--------------------------");
     System.out.print("-------[");
     String expression = scanner.nextLine();
-    // System.out.println("--------------------------");
     return expression;
   }
 
@@ -63,10 +62,6 @@ public class CalcAscii implements ViewInterface {
     System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
     System.out.println("--------------------------");
     System.out.println("-------A N S W E R--------");
-    // for (int i = 0; i < 26 - (result.length() + 1); i++) {
-    // System.out.print("-");
-    // }
-    // System.out.println("[" + result);
     System.out.println("-------[" + result);
     System.out.println("--------------------------");
     System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");

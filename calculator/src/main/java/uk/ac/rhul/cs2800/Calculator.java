@@ -6,8 +6,11 @@ package uk.ac.rhul.cs2800;
  */
 public class Calculator {
 
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
-    if (System.console() != null) {
+    if (System.console() == null) {
       GuiDriver.initiateGui(args);
     } else {
       CalcAscii ascii = new CalcAscii();
