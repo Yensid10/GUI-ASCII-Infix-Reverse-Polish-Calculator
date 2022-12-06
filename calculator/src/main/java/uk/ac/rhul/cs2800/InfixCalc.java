@@ -18,6 +18,13 @@ public class InfixCalc implements CalcInterface {
   @Override
   public float evaluate(String expression) throws InvalidExpressionException, BadTypeException {
     String[] splitExpression = expression.split(" ");
+    try {
+      Float.parseFloat(splitExpression[splitExpression.length - 1]);
+    } catch (Exception e) {
+      if (!splitExpression[splitExpression.length - 1].equals(")")) {
+        throw new InvalidExpressionException("INVALID EXPRESSION");
+      }
+    }
     for (int i = 0; i < splitExpression.length; i++) {
       try {
         str.push(Float.toString(Float.parseFloat(splitExpression[i])));

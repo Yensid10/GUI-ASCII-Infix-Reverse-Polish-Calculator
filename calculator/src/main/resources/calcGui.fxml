@@ -21,7 +21,7 @@
             </Label>
             <Pane layoutX="10.0" layoutY="146.0" prefHeight="109.0" prefWidth="270.0">
                <children>
-                  <TextField fx:id="result" editable="false" layoutY="55.0" prefHeight="57.0" prefWidth="270.0" styleClass="result">
+                  <TextField fx:id="result" alignment="CENTER" editable="false" layoutY="55.0" prefHeight="57.0" prefWidth="270.0" styleClass="result">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>

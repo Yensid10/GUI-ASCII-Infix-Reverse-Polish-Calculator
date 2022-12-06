@@ -1,6 +1,5 @@
 package uk.ac.rhul.cs2800;
 
-import java.util.EmptyStackException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -40,10 +39,13 @@ public class CalcJavaFx implements ViewInterface {
     try {
       answer = Float.toString(calculator.evaluate(getExpression(), getFix()));
       result.setStyle("-fx-background-color: #00000025;");
-    } catch (Exception e) { 
-      // add dividing by zero & overflow errors
+    } catch (Exception e) {
       answer = "INVALID EXPRESSION";
-      result.setStyle("-fx-background-color: #ff000065;");
+      result.setStyle("-fx-background-color: #ff000070;");
+    }
+    if (answer == "Infinity") {
+      answer = "INVALID EXPRESSION";
+      result.setStyle("-fx-background-color: #ff000070;");
     }
     setAnswer(answer);
   }

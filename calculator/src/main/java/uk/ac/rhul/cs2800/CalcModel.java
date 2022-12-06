@@ -6,9 +6,11 @@ package uk.ac.rhul.cs2800;
  */
 public class CalcModel {
   RevPolishCalc revPolishCalc;
+  InfixCalc infixCalc;
 
   public CalcModel() {
     revPolishCalc = new RevPolishCalc();
+    infixCalc = new InfixCalc();
   }
 
   /**
@@ -23,7 +25,7 @@ public class CalcModel {
     if (isPostfix == true) {
       return revPolishCalc.evaluate(expression);
     } else {
-      return 0;
+      return infixCalc.evaluate(expression);
     }
   }
 }

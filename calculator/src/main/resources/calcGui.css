@@ -13,6 +13,7 @@
     -fx-text-fill: rgb(254, 224, 255);
     /* -fx-text-stroke-color: #000000; */
     -fx-text-stroke: 3px;
+    -fx-alignment: center;
 }
 .expression{
     -fx-background-color: #00000080;
