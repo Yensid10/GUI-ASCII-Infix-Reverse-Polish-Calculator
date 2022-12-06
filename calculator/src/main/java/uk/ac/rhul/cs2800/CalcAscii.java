@@ -7,57 +7,89 @@ import java.util.Scanner;
  *
  */
 public class CalcAscii implements ViewInterface {
-  static String expression;
   String answer;
-  
+  static Scanner scanner = new Scanner(System.in);
+  boolean fix;
+  CalcModel calculator;
+
   /**
    * 
    */
-  public static void terminalMenu() {
-    Scanner scanner = new Scanner(System.in);
+  public void terminalMenu() {
+    calculator = new CalcModel();
+    System.out.println("||||||||||||||||||||||||||");
     System.out.println("--------------------------");
     System.out.println("--------CALCULATOR--------");
-    System.out.println("--------------------------");
-    System.out.println("----DO YOU WANT TO USE----");
-    System.out.println("---Infix|Reverse Polish---");
-    System.out.println("--------TYPE(I/R)---------");
-    System.out.println("--------------------------");
-    String notation = "";
-    while ((notation.equals("I") != true) && (notation.equals("R") != true)) {
-      System.out.print("------------------------[");
-      notation = scanner.next().toUpperCase();
-      if ((notation.equals("I")) || (notation.equals("R"))) {
-        continue;
-      } else {
-        System.out.println("-----PLEASE RE-ENTER------");
+    while (true) {
+      String answer;
+      try {
+        answer = Float.toString(calculator.evaluate(getExpression(), getFix()));
+      } catch (Exception e) {
+        answer = "INVALID EXPRESSION";
       }
-    }
-    System.out.println("-------PLEASE ENTER-------");
-    System.out.println("--------EXPRESSION--------");
-    System.out.print("--------[");
-    expression = scanner.next();
-    if (notation.equals("I")) {
-      // call infix
-    } else {
-      // call reverse polish
+      if (answer == "Infinity") {
+        answer = "INVALID EXPRESSION";
+      }
+      System.out.println("--------------------------");
+      setAnswer(answer);
+      System.out.println("--------------------------");
+      System.out.println("-DO YOU WANT TO USE AGAIN-");
+      System.out.println("--------TYPE(Y/??)--------");
+      System.out.println("--------------------------");
+      System.out.print("--------[");
+      String notation = scanner.nextLine().toUpperCase();
+      if (!notation.equals("Y")) {
+        System.out.println("--------------------------");
+        System.out.println("||||||||||||||||||||||||||");
+        System.exit(0);
+      }
     }
   }
 
   @Override
   public String getExpression() {
-    // TODO Auto-generated method stub
-    return null;
+    System.out.println("--------------------------");
+    System.out.println("-------PLEASE ENTER-------");
+    System.out.println("--------EXPRESSION--------");
+    System.out.println("--------------------------");
+    System.out.print("-------[");
+    String expression = scanner.nextLine();
+    // System.out.println("--------------------------");
+    return expression;
   }
 
   @Override
   public void setAnswer(String result) {
-    // TODO Auto-generated method stub
-    
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("--------------------------");
+    System.out.println("-------A N S W E R--------");
+    // for (int i = 0; i < 26 - (result.length() + 1); i++) {
+    // System.out.print("-");
+    // }
+    // System.out.println("[" + result);
+    System.out.println("-------[" + result);
+    System.out.println("--------------------------");
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
   }
 
   @Override
   public boolean getFix() {
-    // TODO Auto-generated method stub
-    return false;
+    System.out.println("--------------------------");
+    System.out.println("----DO YOU WANT TO USE----");
+    System.out.println("---Infix|Reverse Polish---");
+    System.out.println("--------TYPE(I/P)---------");
+    System.out.println("--------------------------");
+    while (true) {
+      System.out.print("-------[");
+      String notation = scanner.nextLine().toUpperCase();
+      switch (notation) {
+        case "I":
+          return false;
+        case "P":
+          return true;
+        default:
+          System.out.println("-----PLEASE RE-ENTER------");
+      }
+    }
   }
 }

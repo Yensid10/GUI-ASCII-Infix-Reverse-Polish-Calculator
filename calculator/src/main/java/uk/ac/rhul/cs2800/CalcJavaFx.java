@@ -47,6 +47,7 @@ public class CalcJavaFx implements ViewInterface {
       answer = "INVALID EXPRESSION";
       result.setStyle("-fx-background-color: #ff000070;");
     }
+    //Add better custom error messages
     setAnswer(answer);
   }
 

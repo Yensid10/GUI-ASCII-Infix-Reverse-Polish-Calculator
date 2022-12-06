@@ -7,10 +7,11 @@ package uk.ac.rhul.cs2800;
 public class Calculator {
 
   public static void main(String[] args) {
-    if (System.console() == null) {
+    if (System.console() != null) {
       GuiDriver.initiateGui(args);
     } else {
-      CalcAscii.terminalMenu();
+      CalcAscii ascii = new CalcAscii();
+      ascii.terminalMenu();
     }
   }
 }
