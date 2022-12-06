@@ -40,7 +40,8 @@ public class CalcJavaFx implements ViewInterface {
     try {
       answer = Float.toString(calculator.evaluate(getExpression(), getFix()));
       result.setStyle("-fx-background-color: #00000025;");
-    } catch (InvalidExpressionException | EmptyStackException e) {
+    } catch (InvalidExpressionException | EmptyStackException e) { 
+      // add dividing by zero & overflow errors
       answer = "INVALID EXPRESSION";
       result.setStyle("-fx-background-color: #ff000065;");
     }
