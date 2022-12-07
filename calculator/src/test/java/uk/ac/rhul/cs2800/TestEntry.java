@@ -14,6 +14,7 @@ class TestEntry {
   @Test // Test #1
   // This test is just used to help create the constructor and show the test succeeding
   void test() {
+    @SuppressWarnings("unused")
     Entry initialEntry = null;
   }
 

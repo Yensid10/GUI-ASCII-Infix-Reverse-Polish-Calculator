@@ -1,4 +1,4 @@
-Release v1.9
+Release v2.0
 
 Features:
 - Graphical Calculator
@@ -8,6 +8,4 @@ Features:
 - Validates Expressions + Detailed Exceptions
 - Fully Commented Code
 - Complete Documentation via JavaDoc
-
-Excludes:
-- Comments and Documentation for all Tests
+- Fully Commented Tests with Full Coverage

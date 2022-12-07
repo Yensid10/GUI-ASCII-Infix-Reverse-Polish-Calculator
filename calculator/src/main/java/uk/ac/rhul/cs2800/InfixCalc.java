@@ -5,7 +5,6 @@ package uk.ac.rhul.cs2800;
  * Shunting Yard algorithm & feeds it into the Reverse Polish calculator which returns an answer.
  *
  * @author bensh
- *
  */
 public class InfixCalc implements ModelInterface {
   OpStack op;
@@ -25,7 +24,6 @@ public class InfixCalc implements ModelInterface {
     // Splits the passed expression into an array, with each index corresponding to characters
     // between spaces
     String[] splitExpression = expression.split(" ");
-
     // Initial verification to see if the expression given is in Infix notation by checking if the
     // final character/s is either a number or a right bracket, if not it returns an error
     try { // I will always use try catch with parsing floats for verification
@@ -35,7 +33,6 @@ public class InfixCalc implements ModelInterface {
         throw new InvalidExpressionException("INVALID EXPRESSION");
       }
     }
-
     for (int i = 0; i < splitExpression.length; i++) {
       try { // Check if index is a float, if so push to string stack
         str.push(Float.toString(Float.parseFloat(splitExpression[i])));

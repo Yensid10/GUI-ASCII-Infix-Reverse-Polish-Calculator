@@ -10,11 +10,10 @@ import org.junit.jupiter.api.Test;
 
 class TestStack {
 
-  Stack stack; // This was made as the main stack class to test and initialised after Test #1
+  Stack stack; // This was made as the main stack class to test and be initialised after Test #1
   Entry entry; // Made as main entry class to be passed into the stack
   Random random = new Random(); // Creates a random class that's used to generate random integers
 
-  // Add Before Each
   @BeforeEach
   public void setup() {
     this.stack = new Stack(); // Creates an empty stack class for the tests to use
@@ -23,6 +22,7 @@ class TestStack {
   @Test // Test #1
   // This test is just used to help create the constructor and show the test succeeding
   void test() {
+    @SuppressWarnings("unused")
     Stack initalStack = new Stack();
   }
 
