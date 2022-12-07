@@ -8,11 +8,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
 /**
- * @author bensh
+ * A Graphical view for the calculator made using JavaFx.
  *
+ * @author bensh
  */
 public class CalcJavaFx implements ViewInterface {
+  // Since the calculate button will be pressed multiple times,
+  // we define the CalcModel here to avoid duplicate creations, same applies for answer
   CalcModel calculator;
+  String answer;
+
 
   @FXML
   private Button calculate;
@@ -32,19 +37,25 @@ public class CalcJavaFx implements ViewInterface {
   @FXML
   private TextField result;
 
+  /**
+   * When the calculate button is pressed, use CalcModel to retrieve an output.
+   *
+   * @param event a component defined ActionEvent triggered by clicking calculate
+   */
   @FXML
-  void isPressed(ActionEvent event) throws InvalidExpressionException, BadTypeException {
+  void isPressed(ActionEvent event) {
+    // Initiates an instance of the CalcModel used to evaluate given expressions
     calculator = new CalcModel();
-    String answer;
-    try {
+    try { // Checks using error-validation that the result we get from our CalcModel is a float
       answer = Float.toString(calculator.evaluate(getExpression(), getFix()));
-      result.setStyle("-fx-background-color: #00000025;");
-    } catch (Exception e) {
+      if (answer != "Infinity") {
+        result.setStyle("-fx-background-color: #00000025;"); // Default background colours
+      } else { // Only happens for Overflow errors & Dividing by zero errors
+        answer = "MATHS ERROR";
+        result.setStyle("-fx-background-color: #ff000070;"); // Red background for errors
+      }
+    } catch (Exception e) { // Calculators throw different errors for bad inputs, accounts for this
       answer = "INVALID EXPRESSION";
-      result.setStyle("-fx-background-color: #ff000070;");
-    }
-    if (answer == "Infinity") {
-      answer = "MATHS ERROR";
       result.setStyle("-fx-background-color: #ff000070;");
     }
     setAnswer(answer);
@@ -62,9 +73,6 @@ public class CalcJavaFx implements ViewInterface {
 
   @Override
   public boolean getFix() {
-    if (infixButton.isSelected() == true) {
-      return false;
-    }
-    return true;
+    return polishButton.isSelected();
   }
 }

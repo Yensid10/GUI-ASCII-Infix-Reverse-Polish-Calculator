@@ -1,6 +1,8 @@
 package uk.ac.rhul.cs2800;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -96,6 +98,14 @@ class TestInfixCalc {
   @Test // Test #13
   void revPolishNotationTest() throws InvalidExpressionException {
     assertThrows(InvalidExpressionException.class, () -> calculator.evaluate("3 9 4 5 / * 12 + +"),
+        "When entering Reverse Polish Notation into this calculator, it would still compute the "
+            + "expression, after adding verification for this it should throw an exception if the "
+            + "expression given is not in infix notation");
+  }
+
+  @Test // Test #13
+  void systemTestingTest() throws InvalidExpressionException {
+    assertThrows(InvalidExpressionException.class, () -> calculator.evaluate("( 1 - 3 ) 4 + 5"),
         "When entering Reverse Polish Notation into this calculator, it would still compute the "
             + "expression, after adding verification for this it should throw an exception if the "
             + "expression given is not in infix notation");

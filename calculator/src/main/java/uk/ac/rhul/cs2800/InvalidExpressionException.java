@@ -1,8 +1,10 @@
 package uk.ac.rhul.cs2800;
 
 /**
- * @author bensh
+ * An exception thrown when an entered expression does not work with a calculators algorithm,
+ * meaning its an incorrect/unusable expression.
  *
+ * @author bensh
  */
 public class InvalidExpressionException extends Exception {
   private static final long serialVersionUID = 1L;

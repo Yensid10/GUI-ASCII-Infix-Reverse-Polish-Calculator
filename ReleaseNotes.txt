@@ -1,11 +1,13 @@
-Release v1.1
+Release v1.9
 
 Features:
 - Graphical Calculator
 - Ascii Calculator
 - Handles Postfix
 - Handles Infix
-- Validates Expressions
+- Validates Expressions + Detailed Exceptions
+- Fully Commented Code
+- Complete Documentation via JavaDoc
 
 Excludes:
--Custom Exceptions
+- Comments and Documentation for all Tests
