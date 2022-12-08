@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="uk.ac.rhul.cs2800.TestNumStack" time="0.007" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\bensh\eclipse-workspace\CS2800\calculator\target\test-classes;C:\Users\bensh\eclipse-workspace\CS2800\calculator\target\classes;C:\Users\bensh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.0\junit-jupiter-engine-5.4.0.jar;C:\Users\bensh\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\bensh\.m2\repository\org\junit\platform\junit-platform-engine\1.4.0\junit-platform-engine-1.4.0.jar;C:\Users\bensh\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\bensh\.m2\repository\org\junit\platform\junit-platform-commons\1.4.0\junit-platform-commons-1.4.0.jar;C:\Users\bensh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.0\junit-jupiter-api-5.4.0.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="C:\Users\bensh\Downloads\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\bensh\AppData\Local\Temp\surefire7302918778163134055\surefirebooter-20221208230028137_3.jar C:\Users\bensh\AppData\Local\Temp\surefire7302918778163134055 2022-12-08T23-00-27_336-jvmRun1 surefire-20221208230028137_1tmp surefire_0-20221208230028137_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\bensh\eclipse-workspace\CS2800\calculator\target\test-classes;C:\Users\bensh\eclipse-workspace\CS2800\calculator\target\classes;C:\Users\bensh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.0\junit-jupiter-engine-5.4.0.jar;C:\Users\bensh\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\bensh\.m2\repository\org\junit\platform\junit-platform-engine\1.4.0\junit-platform-engine-1.4.0.jar;C:\Users\bensh\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\bensh\.m2\repository\org\junit\platform\junit-platform-commons\1.4.0\junit-platform-commons-1.4.0.jar;C:\Users\bensh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.0\junit-jupiter-api-5.4.0.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\bensh\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bensh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Users\bensh\Downloads\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\bensh\eclipse-workspace\CS2800\calculator"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\bensh\AppData\Local\Temp\surefire7302918778163134055\surefirebooter-20221208230028137_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.1+12"/>
+    <property name="user.name" value="bensh"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.1+12"/>
+    <property name="localRepository" value="C:\Users\bensh\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\bensh\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="user.dir" value="C:\Users\bensh\eclipse-workspace\CS2800\calculator"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\bensh\Downloads\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/bensh/Downloads/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin/server;C:/Users/bensh/Downloads/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\bensh\AppData\Local\Microsoft\WindowsApps;;C:\Users\bensh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bensh\Downloads\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.1+12"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="emptyStackTest" classname="uk.ac.rhul.cs2800.TestNumStack" time="0.002"/>
+  <testcase name="pushPopTest" classname="uk.ac.rhul.cs2800.TestNumStack" time="0.001"/>
+  <testcase name="test" classname="uk.ac.rhul.cs2800.TestNumStack" time="0.001"/>
+</testsuite>

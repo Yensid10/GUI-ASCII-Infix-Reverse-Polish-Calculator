@@ -1,7 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 /**
- * Model used to control the calculators & determine which one is being called, returns an answer.
+ * Model used to control the calculators and determine which one is being called, returns an answer.
  *
  * @author bensh
  */

@@ -12,7 +12,7 @@ public class CalcAscii implements ViewInterface {
   private static Scanner scanner = new Scanner(System.in);
 
   /**
-   * A menu for the ASCII view that provides answers to given expressions & repeats if prompted.
+   * A menu for the ASCII view that provides answers to given expressions and repeats if prompted.
    */
   public void terminalMenu() {
     // Initiates an instance of the CalcModel used to evaluate given expressions
@@ -31,7 +31,8 @@ public class CalcAscii implements ViewInterface {
         answer = "INVALID EXPRESSION";
       }
       // Since float mathematical errors return Float.POSITIVE_INFINITY for the constraints given,
-      // & is then converted into the string "infinity", we check this & change answer to MATH ERROR
+      // and is then converted into the string "infinity", we check this and change answer to MATH
+      // ERROR
       if (answer == "Infinity") {
         answer = "MATHS ERROR";
       }

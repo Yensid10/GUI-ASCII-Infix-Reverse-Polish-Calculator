@@ -2,14 +2,14 @@ package uk.ac.rhul.cs2800;
 
 /**
  * A calculator algorithm that receives Infix notation, converts it into Postfix notation using the
- * Shunting Yard algorithm & feeds it into the Reverse Polish calculator which returns an answer.
+ * Shunting Yard algorithm and feeds it into the Reverse Polish calculator which returns an answer.
  *
  * @author bensh
  */
 public class InfixCalc implements ModelInterface {
   private OpStack op;
   private StrStack str;
-  
+
 
   /**
    * A constructor that initialises instances of each stack type needed for Shunting Yard algorithm.
@@ -24,7 +24,7 @@ public class InfixCalc implements ModelInterface {
     // Splits the passed expression into an array, with each index corresponding to characters
     // between spaces
     String[] splitExpression = expression.split(" ");
-    boolean loop; //Needed to refactor a "while (true)" I had, which is a bad code smell
+    boolean loop; // Needed to refactor a "while (true)" I had, which is a bad code smell
     // Initial verification to see if the expression given is in Infix notation by checking if the
     // final character/s is either a number or a right bracket, if not it returns an error
     try { // I will always use try catch with parsing floats for verification
