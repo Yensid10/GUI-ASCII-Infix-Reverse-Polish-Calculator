@@ -6,7 +6,7 @@ package uk.ac.rhul.cs2800;
  * @author bensh
  */
 public class RevPolishCalc implements ModelInterface {
-  NumStack result;
+  private NumStack result;
 
   /**
    * A constructor that initialises instances of the stack type needed to solve Reverse Polish

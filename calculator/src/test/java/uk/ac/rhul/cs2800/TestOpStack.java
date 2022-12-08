@@ -8,7 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestOpStack {
-  OpStack opStack; // This was made as the main OpStack class to test and initialise after Test#1
+  // This was made as the main OpStack class to test and initialise after Test #1
+  private OpStack opStack;
 
   @BeforeEach
   public void setup() {

@@ -7,9 +7,9 @@ package uk.ac.rhul.cs2800;
  * @author bensh
  */
 public class InfixCalc implements ModelInterface {
-  OpStack op;
-  StrStack str;
-  boolean loop;
+  private OpStack op;
+  private StrStack str;
+  
 
   /**
    * A constructor that initialises instances of each stack type needed for Shunting Yard algorithm.
@@ -24,6 +24,7 @@ public class InfixCalc implements ModelInterface {
     // Splits the passed expression into an array, with each index corresponding to characters
     // between spaces
     String[] splitExpression = expression.split(" ");
+    boolean loop; //Needed to refactor a "while (true)" I had, which is a bad code smell
     // Initial verification to see if the expression given is in Infix notation by checking if the
     // final character/s is either a number or a right bracket, if not it returns an error
     try { // I will always use try catch with parsing floats for verification
@@ -37,7 +38,7 @@ public class InfixCalc implements ModelInterface {
       try { // Check if index is a float, if so push to string stack
         str.push(Float.toString(Float.parseFloat(splitExpression[i])));
       } catch (Exception e) {
-        switch (splitExpression[i]) { // Could also be an if statement
+        switch (splitExpression[i]) { // (Could also be an if statement)
           case "(": // else if it's a left bracket, push to operator stack
             op.push(Symbol.LEFT_BRACKET);
             break;

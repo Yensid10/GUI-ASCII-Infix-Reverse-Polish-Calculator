@@ -8,8 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestNumStack {
-  NumStack numStack; // This was made as the main NumStack class to test and initialise after Test#1
-  
+  // This was made as the main NumStack class to test and initialise after Test#1
+  private NumStack numStack;
+
   @BeforeEach
   public void setup() {
     this.numStack = new NumStack(); // Creates an empty NumStack class for the tests to use
@@ -27,8 +28,7 @@ class TestNumStack {
   // useless if you can't pop it and vice-versa
   void pushPopTest() throws BadTypeException {
     numStack.push(382.0f);
-    assertEquals(numStack.pop(), 382.0f,
-        "Push and then pop of a float number should return true");
+    assertEquals(numStack.pop(), 382.0f, "Push and then pop of a float number should return true");
   }
 
   @Test // Test #3
@@ -36,8 +36,7 @@ class TestNumStack {
   // exception is thrown
   void emptyStackTest() throws BadTypeException {
     numStack.push(382.0f);
-    assertEquals(numStack.pop(), 382.0f,
-        "Push and then pop of a float number should return true");
+    assertEquals(numStack.pop(), 382.0f, "Push and then pop of a float number should return true");
     assertThrows(EmptyStackException.class, () -> numStack.pop(),
         "Push, pop & pop will subsequently throw an exception.");
   }

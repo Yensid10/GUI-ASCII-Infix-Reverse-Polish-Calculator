@@ -6,8 +6,8 @@ package uk.ac.rhul.cs2800;
  * @author bensh
  */
 public class CalcModel {
-  RevPolishCalc revPolishCalc;
-  InfixCalc infixCalc;
+  private RevPolishCalc revPolishCalc;
+  private InfixCalc infixCalc;
 
   /**
    * A constructor that initialises instances of each calculator.

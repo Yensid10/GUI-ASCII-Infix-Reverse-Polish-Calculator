@@ -1,5 +1,6 @@
 package uk.ac.rhul.cs2800;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,10 +33,10 @@ public class GuiDriver extends Application {
   }
 
   @Override
-  public void start(Stage primaryStage) throws Exception {
+  public void start(Stage primaryStage) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/calcGui.fxml"));
     Scene scene = new Scene(root, 300, 310);
-    primaryStage.setResizable(false); //Chosen as calculator does not aesthetically resize
+    primaryStage.setResizable(false); // Chosen as calculator does not aesthetically resize
     primaryStage.setTitle("Calculator");
     primaryStage.setScene(scene);
     primaryStage.show();

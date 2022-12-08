@@ -8,7 +8,7 @@ import java.util.EmptyStackException;
  * @author bensh
  */
 public class OpStack {
-  Stack opStack;
+  Stack opStack; // Only variable that isn't private since I call it in another class
 
   /**
    * A constructor that initialises the basic stack class needed.

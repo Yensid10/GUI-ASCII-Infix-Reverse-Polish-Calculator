@@ -8,7 +8,7 @@ import java.util.EmptyStackException;
  * @author bensh
  */
 public class StrStack {
-  Stack strStack;
+  private Stack strStack;
 
   /**
    * A constructor that initialises the basic stack class needed.

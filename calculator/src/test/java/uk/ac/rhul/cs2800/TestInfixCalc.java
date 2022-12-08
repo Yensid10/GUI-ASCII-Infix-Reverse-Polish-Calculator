@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class TestInfixCalc {
   // This was made as the main InfixCalc class to test and initialise after Test #1
-  InfixCalc calculator;
+  private InfixCalc calculator;
 
   @BeforeEach
   public void setup() {

@@ -15,8 +15,8 @@ import javafx.scene.control.ToggleGroup;
 public class CalcJavaFx implements ViewInterface {
   // Since the calculate button will be pressed multiple times,
   // we define the CalcModel here to avoid duplicate creations, same applies for answer
-  CalcModel calculator;
-  String answer;
+  private CalcModel calculator;
+  private String answer;
 
 
   @FXML

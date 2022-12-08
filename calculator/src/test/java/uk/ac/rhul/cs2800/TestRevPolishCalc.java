@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class TestRevPolishCalc {
   // This was made as the main RevPolishCalc class to test and initialise after Test #1
-  RevPolishCalc calculator;
+  private RevPolishCalc calculator;
 
   @BeforeEach
   public void setup() {

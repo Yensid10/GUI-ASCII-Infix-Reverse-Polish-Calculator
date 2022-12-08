@@ -8,7 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestStrStack {
-  StrStack strStack; // This was made as the main StrStack class to test and initialise after Test#1
+  // This was made as the main StrStack class to test and initialise after Test #1
+  private StrStack strStack;
 
 
   @BeforeEach

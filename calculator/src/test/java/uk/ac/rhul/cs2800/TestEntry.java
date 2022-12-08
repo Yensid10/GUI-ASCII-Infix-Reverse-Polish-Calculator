@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 class TestEntry {
-  Entry entry; // Created as main entry class to be initialised within each test
-  Entry entry2; // Created to help with the comparative methods (equals & hashcode)
+  private Entry entry; // Created as main entry class to be initialised within each test
+  private Entry entry2; // Created to help with the comparative methods (equals & hashcode)
 
   // Don't need a before each since you need to directly add into the entry every time you call it
 
